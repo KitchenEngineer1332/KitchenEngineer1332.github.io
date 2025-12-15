@@ -1,5 +1,5 @@
-# 🌸 Kitchen Engineer
-Sharafat me Shararat Chupi hai 🤭🌸
+# 𝓚𝓲𝓽𝓬𝓱𝓮𝓷 𝓔𝓷𝓰𝓲𝓷𝓮𝓮𝓻
+* 𝓢𝓱𝓪𝓻𝓪𝓯𝓪𝓽 𝓶𝓮 𝓢𝓱𝓪𝓻𝓪𝓻𝓪𝓽 𝓒𝓱𝓾𝓹𝓲 𝓱𝓪𝓲 🤭🌸 *
 
 A personal profile and portfolio website built with simplicity, curiosity, and
 human warmth in mind.
