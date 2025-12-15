@@ -357,3 +357,40 @@ body {
     opacity: 1;
   }
 }
+
+/* =========================
+   TOUCH DEVICE FIX (IMPORTANT)
+========================= */
+@media (hover: none) and (pointer: coarse) {
+
+  /* Disable hover scaling */
+  .box,
+  .box.active {
+    transform: none !important;
+  }
+
+  /* Disable blur/dim overlay */
+  .layout.active .box:not(.active) {
+    filter: none !important;
+  }
+
+  .overlay {
+    display: none;
+  }
+}
+
+@media (max-width: 520px) {
+
+  .layout {
+    padding: 20px 16px;
+  }
+
+  .box {
+    padding: 24px 20px;
+  }
+
+  .contact-icons {
+    flex-wrap: wrap;
+    row-gap: 12px;
+  }
+}
