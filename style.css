@@ -394,3 +394,42 @@ body {
     row-gap: 12px;
   }
 }
+
+/* ================================
+   Custom Scrollbar (Desktop)
+   ================================ */
+
+/* Chrome, Edge, Brave, Safari */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f3e6d6; /* warm cream */
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    #d6b46c, /* soft gold */
+    #c79b3a
+  );
+  border-radius: 10px;
+  border: 2px solid #f3e6d6; /* creates padding effect */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    180deg,
+    #e0c27a,
+    #b88a2e
+  );
+}
+
+/* ================================
+   Firefox Support
+   ================================ */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #c79b3a #f3e6d6;
+}
