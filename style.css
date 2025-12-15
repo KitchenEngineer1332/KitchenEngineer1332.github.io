@@ -433,3 +433,7 @@ body {
   scrollbar-width: thin;
   scrollbar-color: #c79b3a #f3e6d6;
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+}
