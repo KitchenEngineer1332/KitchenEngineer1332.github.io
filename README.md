@@ -49,6 +49,7 @@ and grow with kindness and intention.
 
 ```text
 /
+├── LICENSE
 ├── README.md
 ├── index.html
 ├── style.css
