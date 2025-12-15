@@ -1,4 +1,5 @@
 # 🌸 Kitchen Engineer
+Sharafat me Shararat Chupi hai 🤭🌸
 
 A personal profile and portfolio website built with simplicity, curiosity, and
 human warmth in mind.
@@ -48,6 +49,7 @@ and grow with kindness and intention.
 
 ```text
 /
+├── README.md
 ├── index.html
 ├── style.css
 ├── script.js
