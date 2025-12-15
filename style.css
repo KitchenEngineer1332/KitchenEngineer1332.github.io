@@ -1,0 +1,359 @@
+/* =================================================
+   RESET & SAFETY
+================================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* =================================================
+   COLOR SYSTEM
+================================================= */
+:root {
+  --bg-main: #f6e7d6;
+  --bg-card: #fff5ea;
+  --accent-red: #b63a2b;
+  --accent-gold: #c9a24d;
+  --text-main: #3a2a1f;
+}
+
+/* =================================================
+   BASE
+================================================= */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg-main);
+  color: var(--text-main);
+  min-height: 100vh;
+}
+
+/* =================================================
+   LAYOUT — DESKTOP DEFAULT
+================================================= */
+.layout {
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  padding: 40px;
+  gap: 40px;
+}
+
+/* =================================================
+   OVERLAY
+================================================= */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.layout.active .overlay {
+  opacity: 1;
+}
+
+/* =================================================
+   CARD BASE
+================================================= */
+.box {
+  background: var(--bg-card);
+  border-radius: 24px;
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.08);
+  position: relative;
+  z-index: 3;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    filter 0.4s ease;
+  will-change: transform;
+}
+
+.layout.active .box:not(.active) {
+  filter: blur(2px) brightness(0.6);
+}
+
+.box.active {
+  transform: scale(1.16);
+  z-index: 10;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.35);
+}
+
+/* =================================================
+   LEFT CARD — PROFILE (DESKTOP)
+================================================= */
+.left {
+  width: 50%;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform-origin: left center;
+}
+
+.profile-img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 6px solid var(--accent-gold);
+  object-fit: cover;
+  margin-bottom: 24px;
+}
+
+.left h1 {
+  font-size: 2.3rem;
+  margin-bottom: 6px;
+}
+
+.left h2 {
+  font-size: 1.1rem;
+  color: var(--accent-red);
+  margin-bottom: 16px;
+}
+
+.bio {
+  max-width: 420px;
+  line-height: 1.65;
+  font-size: 0.95rem;
+}
+
+/* =================================================
+   RIGHT COLUMN — DESKTOP
+================================================= */
+.right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.right-top,
+.right-bottom {
+  flex: 1;
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right-top {
+  transform-origin: right top;
+}
+
+.right-bottom {
+  transform-origin: right bottom;
+}
+
+.right-top h3,
+.right-bottom h3 {
+  color: var(--accent-red);
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+}
+
+.right-top p {
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* =================================================
+   CONTACT ICONS (FINAL)
+================================================= */
+.contact-icons {
+  display: flex;
+  gap: 14px;
+  margin-top: 12px;
+
+  /* start from left edge */
+  justify-content: flex-start;
+}
+
+/* base icon circle */
+.contact-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+  border: 2px solid var(--accent-gold);
+  background: transparent;
+
+  color: var(--accent-red);
+  text-decoration: none;
+
+  overflow: hidden;
+
+  transition:
+    width 0.35s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* icon glyph */
+.contact-icon i {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+/* label (hidden by default) */
+.contact-icon span {
+  position: absolute;
+  left: 46px;
+  white-space: nowrap;
+  opacity: 0;
+  font-size: 0.85rem;
+  color: var(--text-main);
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+/* hover / focus */
+.contact-icon:hover,
+.contact-icon:focus-visible {
+  width: 130px;
+  border-radius: 999px;
+  justify-content: flex-start;
+  padding-left: 14px;
+  background: var(--accent-gold);
+  transform: translateY(-2px);
+}
+
+.contact-icon:hover span,
+.contact-icon:focus-visible span {
+  opacity: 1;
+}
+
+.profile-img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 6px solid var(--accent-gold);
+  object-fit: cover;
+
+  /* NEW */
+  object-position: center top;
+  background: radial-gradient(circle at top, #fff2e0, #e8d3b8);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+}
+.bio {
+  max-width: 420px;
+  line-height: 1.7;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+.left:hover .profile-img {
+  transform: scale(1.03);
+  transition: transform 0.4s ease;
+}
+
+/* =================================================
+   TABLET & LARGE PHONES (≤ 900px)
+================================================= */
+@media (max-width: 900px) {
+
+  body {
+    overflow-y: auto;
+  }
+
+  .layout {
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 20px;
+    gap: 24px;
+  }
+
+  .overlay {
+    position: fixed;
+  }
+
+  /* PROFILE CARD */
+  .left {
+    width: 100%;
+    max-width: 700px;
+    padding: 32px 26px;
+    transform-origin: center;
+  }
+
+  .profile-img {
+    width: 180px;
+    height: 180px;
+  }
+
+  /* INFO + CONTACT IN SAME ROW */
+  .right {
+    width: 100%;
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+
+  .right-top,
+  .right-bottom {
+    padding: 22px 20px;
+    align-items: center;
+    text-align: center;
+    transform-origin: center;
+  }
+
+  .right-top h3,
+  .right-bottom h3 {
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+  }
+
+  .right-top p {
+    font-size: 0.88rem;
+  }
+
+  /* contact icons still edge-aligned */
+  .contact-icons {
+    justify-content: flex-start;
+  }
+
+  .box.active {
+    transform: scale(1.05);
+  }
+}
+
+/* =================================================
+   SMALL PHONES (≤ 520px)
+================================================= */
+@media (max-width: 520px) {
+
+  .left {
+    max-width: 360px;
+    padding: 24px 20px;
+  }
+
+  .right {
+    max-width: 360px;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* expand icons when card is active (tap) */
+  .box.active .contact-icon {
+    width: 130px;
+  }
+
+  .box.active .contact-icon span {
+    opacity: 1;
+  }
+}

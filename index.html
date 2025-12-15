@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kitchen Engineer's Profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="cc.png" type="image/x-icon">
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="layout">
+
+    <div class="overlay"></div>
+
+    <!-- LEFT / PROFILE -->
+    <section class="box left">
+      <img src="cc.png" alt="Profile" class="profile-img" />
+      <h1>𝓚𝓲𝓽𝓬𝓱𝓮𝓷 𝓔𝓷𝓰𝓲𝓷𝓮𝓮𝓻</h1>
+      <h2>𝓐𝓭𝓸𝓹𝓽𝓮𝓭 𝓽𝓸 𝓛𝓸𝓿𝓮 𝓪𝓷𝓭 𝓚𝓲𝓷𝓭𝓷𝓮𝓼𝓼</h2>
+      <h3>𝓢𝓱𝓪𝓻𝓪𝓯𝓪𝓽 𝓶𝓮 𝓢𝓱𝓪𝓻𝓪𝓻𝓪𝓽 𝓒𝓱𝓾𝓹𝓲 𝓱𝓪𝓲 🤭🌸</h3><br>
+      <p class="bio">
+        A simple human being who is exploring the world by stupid actions and being curious
+      </p>
+    </section>
+
+    <!-- RIGHT -->
+    <section class="right">
+
+      <!-- INFO -->
+      <div class="box right-top">
+        <h3>About Me</h3>
+        <p>
+          I’m a simple human exploring the world with curiosity, experiments, and the occasional bad decision.
+          I like learning how things work, breaking them, fixing them, and repeating the process with kindness and intention.
+          Nevermind, you can assume me another creation of Almighty in love with the nature he created.
+        </p>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="box right-bottom">
+        <h3>Contact</h3>
+
+        <div class="contact-icons">
+          <a href="https://github.com/KitchenEngineer1332" class="contact-icon github">
+            <i class="fa-brands fa-github"></i>
+            <span>GitHub</span>
+          </a>
+
+          <a href="https://in.pinterest.com/kitchen_engineer1332/" class="contact-icon pinterest">
+            <i class="fa-brands fa-pinterest"></i>
+            <span>Pinterest</span>
+          </a>
+
+          <a href="https://www.instagram.com/kitchen_engineer1332/" class="contact-icon instagram">
+            <i class="fa-brands fa-instagram"></i>
+            <span>Instagram</span>
+          </a>
+
+          <a href="https://www.reddit.com/user/Kitchen_Engineer1332" class="contact-icon reddit">
+            <i class="fa-brands fa-reddit"></i>
+            <span>Reddit</span>
+          </a>
+
+          <a href="https://discord.com/users/1388401123811004537" class="contact-icon discord">
+            <i class="fa-brands fa-discord"></i>
+            <span>Discord</span>
+          </a>
+
+          <a href="https://x.com/KitchenEng43268" class="contact-icon x">
+            <i class="fa-brands fa-x-twitter"></i>
+            <span>X</span>
+          </a>
+          
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Interaction Script -->
+  <script>
+    const layout = document.querySelector(".layout");
+    const boxes = document.querySelectorAll(".box");
+    let locked = null;
+
+    boxes.forEach(box => {
+      box.addEventListener("mouseenter", () => {
+        if (locked) return;
+        layout.classList.add("active");
+        box.classList.add("active");
+      });
+
+      box.addEventListener("mouseleave", () => {
+        if (locked) return;
+        layout.classList.remove("active");
+        box.classList.remove("active");
+      });
+
+      box.addEventListener("click", e => {
+        e.stopPropagation();
+        if (locked === box) {
+          unlock();
+        } else {
+          lock(box);
+        }
+      });
+    });
+
+    document.addEventListener("click", unlock);
+
+    function lock(box) {
+      unlock();
+      locked = box;
+      layout.classList.add("active");
+      box.classList.add("active");
+    }
+
+    function unlock() {
+      layout.classList.remove("active");
+      boxes.forEach(b => b.classList.remove("active"));
+      locked = null;
+    }
+
+    // Disable right click
+    document.addEventListener("contextmenu", e => e.preventDefault());
+  </script>
+</body>
+</html>
