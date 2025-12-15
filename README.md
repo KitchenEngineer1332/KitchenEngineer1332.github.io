@@ -31,7 +31,7 @@ and grow with kindness and intention.
 - Desktop-only interactive cards (hover-based)
 - Touch-safe behavior on mobile devices
 - Expandable social icons with brand colors
-- No frameworks, just the web
+- No frameworks — just the web
 
 ---
 
@@ -45,34 +45,13 @@ and grow with kindness and intention.
 ---
 
 ## 📁 Project Structure
+
+```text
 /
 ├── index.html
 ├── style.css
 ├── script.js
 ├── profile.png
 └── screenshots/
-├── desktop.png
-└── mobile.png
-
-
----
-
-## 🌱 Philosophy
-
-I believe learning happens through curiosity, mistakes, and reflection.  
-This project embraces simplicity over complexity and intention over perfection.
-
----
-
-## 📌 Notes
-
-- Designed and tested on real devices (including Android phones)
-- No tracking, no analytics, no noise
-- Built to evolve slowly over time
-
----
-
-## 🤍 License
-
-This project is personal and open for inspiration.
-Please don’t copy it verbatim build something that feels like *you*.
+    ├── desktop.png
+    └── mobile.png
