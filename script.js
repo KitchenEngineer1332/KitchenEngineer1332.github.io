@@ -59,3 +59,4 @@ function unlock() {
   boxes.forEach(b => b.classList.remove("active"));
   lockedBox = null;
 }
+
