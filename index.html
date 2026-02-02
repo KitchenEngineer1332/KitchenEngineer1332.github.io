@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" translate="no">
 <head>
   <meta charset="UTF-8" />
   <title>Kitchen Engineer's Profile</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google" content="notranslate">
   <link rel="shortcut icon" href="cc.png" type="image/x-icon">
   <meta name="description" content="Kitchen Engineer is a personal portfolio and profile website exploring curiosity, learning through experiments, and building with kindness and intention." />
   <meta name="author" content="Kitchen Engineer" />
@@ -18,6 +19,11 @@
   <meta name="twitter:description" content="Exploring curiosity, learning through experiments, and kindness." />
   <meta name="twitter:image" content="https://kitchenengineer1332.github.io/profile.png" />
 
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600;700&family=Playfair+Display:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+
   <!-- Font Awesome -->
   <link
     rel="stylesheet"
@@ -27,30 +33,51 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Floating particles background -->
+  <div class="particles">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
 
   <main class="layout">
-
     <div class="overlay"></div>
 
     <!-- LEFT / PROFILE -->
     <section class="box left">
-      <img src="cc.png" alt="Profile" class="profile-img" />
-      <h1>𝓚𝓲𝓽𝓬𝓱𝓮𝓷 𝓔𝓷𝓰𝓲𝓷𝓮𝓮𝓻</h1>
-      <h2>𝓐𝓭𝓸𝓹𝓽𝓮𝓭 𝓽𝓸 𝓛𝓸𝓿𝓮 𝓪𝓷𝓭 𝓚𝓲𝓷𝓭𝓷𝓮𝓼𝓼</h2>
-      <h3>𝓢𝓱𝓪𝓻𝓪𝓯𝓪𝓽 𝓶𝓮 𝓢𝓱𝓪𝓻𝓪𝓻𝓪𝓽 𝓒𝓱𝓾𝓹𝓲 𝓱𝓪𝓲 🤭🌸</h3><br>
-      <p class="bio">
-        A simple human being who is exploring the world by stupid actions and being curious
-      </p>
+      <div class="profile-wrapper">
+        <div class="profile-glow"></div>
+        <img src="cc.png" alt="Profile" class="profile-img" />
+      </div>
+      
+      <div class="content-wrapper">
+        <h1 class="title-main" translate="no">𝓚𝓲𝓽𝓬𝓱𝓮𝓷 𝓔𝓷𝓰𝓲𝓷𝓮𝓮𝓻</h1>
+        <h2 class="subtitle" translate="no">𝓐𝓭𝓸𝓹𝓽𝓮𝓭 𝓽𝓸 𝓛𝓸𝓿𝓮 𝓪𝓷𝓭 𝓚𝓲𝓷𝓭𝓷𝓮𝓼𝓼</h2>
+        <h3 class="tagline">𝓢𝓱𝓪𝓻𝓪𝓯𝓪𝓽 𝓶𝓮 𝓢𝓱𝓪𝓻𝓪𝓻𝓪𝓽 𝓒𝓱𝓾𝓹𝓲 𝓱𝓪𝓲 🤭🌸</h3>
+        
+        <div class="divider"></div>
+        
+        <p class="bio">
+          A simple human being who is exploring the world by stupid actions and being curious
+        </p>
+      </div>
     </section>
 
     <!-- RIGHT -->
     <section class="right">
-
       <!-- INFO -->
       <div class="box right-top">
-        <h3>About Me</h3>
+        <div class="card-header">
+          <h3>About Me</h3>
+          <div class="header-accent"></div>
+        </div>
         <p>
-          I’m a simple human exploring the world with curiosity, experiments, and the occasional bad decision.
+          I'm a simple human exploring the world with curiosity, experiments, and the occasional bad decision.
           I like learning how things work, breaking them, fixing them, and repeating the process with kindness and intention.
           Nevermind, you can assume me another creation of Almighty in love with the nature he created.
         </p>
@@ -58,42 +85,49 @@
 
       <!-- CONTACT -->
       <div class="box right-bottom">
-        <h3>Contact</h3>
+        <div class="card-header">
+          <h3>Contact</h3>
+          <div class="header-accent"></div>
+        </div>
 
         <div class="contact-icons">
-          <a href="https://github.com/KitchenEngineer1332" class="contact-icon github">
+          <a href="https://github.com/KitchenEngineer1332" class="contact-icon github" aria-label="GitHub">
+            <div class="icon-bg"></div>
             <i class="fa-brands fa-github"></i>
             <span>GitHub</span>
           </a>
 
-          <a href="https://in.pinterest.com/kitchen_engineer1332/" class="contact-icon pinterest">
+          <a href="https://in.pinterest.com/kitchen_engineer1332/" class="contact-icon pinterest" aria-label="Pinterest">
+            <div class="icon-bg"></div>
             <i class="fa-brands fa-pinterest"></i>
             <span>Pinterest</span>
           </a>
 
-          <a href="https://www.instagram.com/kitchen_engineer1332/" class="contact-icon instagram">
+          <a href="https://www.instagram.com/kitchen_engineer1332/" class="contact-icon instagram" aria-label="Instagram">
+            <div class="icon-bg"></div>
             <i class="fa-brands fa-instagram"></i>
             <span>Instagram</span>
           </a>
 
-          <a href="https://www.reddit.com/user/Kitchen_Engineer1332" class="contact-icon reddit">
+          <a href="https://www.reddit.com/user/Kitchen_Engineer1332" class="contact-icon reddit" aria-label="Reddit">
+            <div class="icon-bg"></div>
             <i class="fa-brands fa-reddit"></i>
             <span>Reddit</span>
           </a>
 
-          <a href="https://discord.com/users/1388401123811004537" class="contact-icon discord">
+          <a href="https://discord.com/users/1388401123811004537" class="contact-icon discord" aria-label="Discord">
+            <div class="icon-bg"></div>
             <i class="fa-brands fa-discord"></i>
             <span>Discord</span>
           </a>
 
-          <a href="https://x.com/KitchenEng43268" class="contact-icon x">
+          <a href="https://x.com/KitchenEng43268" class="contact-icon x" aria-label="X">
+            <div class="icon-bg"></div>
             <i class="fa-brands fa-x-twitter"></i>
             <span>X</span>
           </a>
-          
         </div>
       </div>
-
     </section>
   </main>
 
@@ -143,6 +177,11 @@
 
     // Disable right click
     document.addEventListener("contextmenu", e => e.preventDefault());
+
+    // Page load animations
+    window.addEventListener('load', () => {
+      document.body.classList.add('loaded');
+    });
   </script>
 </body>
 </html>
