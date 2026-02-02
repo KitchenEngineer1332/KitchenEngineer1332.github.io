@@ -867,3 +867,113 @@ body.loaded .right-bottom {
     opacity: 1;
   }
 }
+
+/* =================================================
+   ADAPTIVE HEIGHT FOR SMALLER SCREENS (e.g., 1366x768)
+================================================= */
+@media (max-height: 800px) {
+  html, body {
+    height: 100%;
+    overflow-y: hidden; /* Optional: Strictly prevents vertical scroll, but may clip content on very small heights */
+  }
+
+  .layout {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .left {
+    padding: 30px 25px;
+  }
+
+  .profile-img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .profile-glow {
+    width: 200px;
+    height: 200px;
+  }
+
+  .profile-wrapper {
+    margin-bottom: 20px;
+  }
+
+  .title-main {
+    font-size: 2.2rem;
+    margin-bottom: 4px;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+  }
+
+  .tagline {
+    font-size: 1rem;
+    margin-bottom: 2px;
+  }
+
+  .divider {
+    margin: 10px auto;
+  }
+
+  .bio {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .right {
+    gap: 20px;
+  }
+
+  .right-top,
+  .right-bottom {
+    padding: 25px 20px;
+  }
+
+  .card-header {
+    margin-bottom: 10px;
+  }
+
+  .card-header h3 {
+    font-size: 1.4rem;
+  }
+
+  .header-accent {
+    width: 50px;
+    height: 2px;
+    margin-top: 4px;
+  }
+
+  .right-top p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .contact-icons {
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  .contact-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .contact-icon i {
+    font-size: 1.3rem;
+  }
+
+  .contact-icon:hover,
+  .contact-icon:focus-visible {
+    width: 140px;
+    padding-left: 15px;
+  }
+
+  .contact-icon span {
+    left: 55px;
+    font-size: 0.9rem;
+  }
+}
