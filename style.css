@@ -872,10 +872,7 @@ body.loaded .right-bottom {
    ADAPTIVE HEIGHT FOR SMALLER SCREENS (e.g., 1366x768)
 ================================================= */
 @media (max-height: 800px) {
-  html, body {
-    height: 100%;
-    overflow-y: hidden; /* Optional: Strictly prevents vertical scroll, but may clip content on very small heights */
-  }
+ 
 
   .layout {
     padding: 20px;
