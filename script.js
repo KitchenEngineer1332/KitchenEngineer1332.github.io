@@ -62,3 +62,25 @@ function unlock() {
   lockedBox = null;
 }
 
+/* -----------------------------
+   TOUCH: TAP-TO-EXPAND ICONS
+----------------------------- */
+const isTouchDevice = matchMedia('(hover: none) and (pointer: coarse)').matches;
+if (isTouchDevice) {
+  document.querySelectorAll('.contact-icon').forEach(icon => {
+    icon.addEventListener('click', e => {
+      if (!icon.classList.contains('expanded')) {
+        e.preventDefault();
+        document.querySelectorAll('.contact-icon.expanded').forEach(i => i.classList.remove('expanded'));
+        icon.classList.add('expanded');
+      }
+    });
+  });
+
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.contact-icon')) {
+      document.querySelectorAll('.contact-icon.expanded').forEach(i => i.classList.remove('expanded'));
+    }
+  });
+}
+

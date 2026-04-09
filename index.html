@@ -177,6 +177,27 @@
       locked = null;
     }
 
+    // Touch: first tap expands icon, second tap navigates
+    const isTouchDevice = matchMedia('(hover: none) and (pointer: coarse)').matches;
+    if (isTouchDevice) {
+      document.querySelectorAll('.contact-icon').forEach(icon => {
+        icon.addEventListener('click', e => {
+          if (!icon.classList.contains('expanded')) {
+            e.preventDefault();
+            document.querySelectorAll('.contact-icon.expanded').forEach(i => i.classList.remove('expanded'));
+            icon.classList.add('expanded');
+          }
+        });
+      });
+
+      // Tap outside collapses expanded icon
+      document.addEventListener('click', e => {
+        if (!e.target.closest('.contact-icon')) {
+          document.querySelectorAll('.contact-icon.expanded').forEach(i => i.classList.remove('expanded'));
+        }
+      });
+    }
+
     // Disable right click
     document.addEventListener("contextmenu", e => e.preventDefault());
 
