@@ -151,6 +151,8 @@
       });
 
       box.addEventListener("click", e => {
+        // Don't lock/unlock if a contact link was tapped
+        if (e.target.closest('.contact-icon')) return;
         e.stopPropagation();
         if (locked === box) {
           unlock();

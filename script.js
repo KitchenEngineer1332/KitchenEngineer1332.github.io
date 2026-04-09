@@ -25,6 +25,8 @@ boxes.forEach(box => {
 ----------------------------- */
 boxes.forEach(box => {
   box.addEventListener("click", e => {
+    // Don't lock/unlock if a contact link was tapped
+    if (e.target.closest('.contact-icon')) return;
     e.stopPropagation();
 
     // If clicking the same box → unlock
