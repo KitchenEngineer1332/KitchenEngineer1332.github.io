@@ -574,13 +574,12 @@ body.loaded .right-bottom {
   opacity: 0;
   font-size: 1rem;
   font-weight: 600;
-  color: #fff;
+  color: var(--accent-red-deep);
   transition: all 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
   pointer-events: none;
   z-index: 1;
   font-family: 'Playfair Display', serif;
   letter-spacing: 0.5px;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 /* Hover/Focus State */
@@ -614,6 +613,8 @@ body.loaded .right-bottom {
 .contact-icon:focus-visible span {
   opacity: 1;
   transform: translateX(4px);
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 /* Premium Glow Effect */
@@ -833,13 +834,6 @@ body.loaded .right-bottom {
     gap: 12px;
   }
 
-  .box.active .contact-icon {
-    width: 150px;
-  }
-
-  .box.active .contact-icon span {
-    opacity: 1;
-  }
 }
 
 /* =================================================
@@ -859,12 +853,15 @@ body.loaded .right-bottom {
     display: none;
   }
 
-  .contact-icon:active {
+  .contact-icon.expanded {
     width: 150px;
+    justify-content: flex-start;
+    padding-left: 18px;
   }
 
-  .contact-icon:active span {
+  .contact-icon.expanded span {
     opacity: 1;
+    color: var(--accent-red-deep);
   }
 }
 
